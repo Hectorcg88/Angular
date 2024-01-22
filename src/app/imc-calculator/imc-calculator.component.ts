@@ -18,8 +18,8 @@ export class ImcCalculatorComponent {
 
   calcularIMC(): void {
     if (this.formData && this.formData.peso && this.formData.altura) {
-      const { peso, altura } = this.formData;
-      const alturaMetros = altura / 100;
+      const { peso, altura }: {peso:number, altura:number}  = this.formData;
+      const alturaMetros: number = altura / 100;
       this.imc = peso / (alturaMetros * alturaMetros);
 
       const resultado: Result = {
